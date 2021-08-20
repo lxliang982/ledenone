@@ -55,13 +55,13 @@ jobs:
 
       - name: Update feeds
         run: |
-          git clone https://github.com/coolsnowwolf/lede.git
-          cd lede
-          cat >> feeds.conf.default <<EOF
-          CONFIG_TARGET_x86=y
-          src-git kenzo https://github.com/kenzok8/openwrt-packages
-          src-git small https://github.com/kenzok8/small
-          EOF          
+          # git clone https://github.com/coolsnowwolf/lede.git
+          # cd lede
+          # cat >> feeds.conf.default <<EOF
+          # CONFIG_TARGET_x86=y
+          # src-git kenzo https://github.com/kenzok8/openwrt-packages
+          # src-git small https://github.com/kenzok8/small
+          # EOF          
           
           ./scripts/feeds update -a
           ./scripts/feeds install -a
